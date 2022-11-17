@@ -27,7 +27,7 @@ service / on new http:Listener(9090) {
 
         KycInfo kycInfo = {
             accountId: accountId,
-            state: "varified",
+            state: "verified",
             supportingDocuments: [
                 {
                     fileId: 5678,
