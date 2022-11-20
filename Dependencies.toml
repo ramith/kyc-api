@@ -230,6 +230,9 @@ dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
 	{org = "ballerina", name = "lang.string"}
 ]
+modules = [
+	{org = "ballerina", packageName = "regex", moduleName = "regex"}
+]
 
 [[package]]
 org = "ballerina"
@@ -274,6 +277,7 @@ name = "kyc_api"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "http"},
+	{org = "ballerina", name = "regex"},
 	{org = "ballerinai", name = "observe"}
 ]
 modules = [
