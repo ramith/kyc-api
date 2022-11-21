@@ -27,7 +27,7 @@ service / on new http:Listener(9090) {
     # + return - HTTP Ok if the kyc is found, otherwise HTTP Not found
     resource function post maps/kyc/[string accountId]() returns KycInfo|error? {
         KycInfo kycInfo;
-        if regex:matches(accountId, "[A-Za-z ]+") {
+        if !regex:matches(accountId, "[0-9]+") {
             kycInfo = {
                 accountId: accountId,
                 state: "rejected",
